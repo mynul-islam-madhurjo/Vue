@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title> Vue js databinding</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<Style>
+    .one {
+        color:red;
+    }
+    .two {
+        text-decoration: line-through;
+    }
+</Style>
+
+<body>
+
+    <h4>One Way Databinding</h4>
+
+    <div id="web">
+
+        <!-- It will not work we need to use databinding for this -->
+        <!-- <a href="{{address}}">Vue</a> -->
+        <a v-bind:href="address" target = "_blank">Vue</a>
+        <!-- We can also use clone  -->
+        <a :href="address" target = "_blank">Vue</a>
+
+        <!-- We can also bind multiple classes with data binding -->
+
+        <div :class="classes">
+            Class
+        </div>
+
+        <input type="text" :value="name">
+        
+    </div>
+
+
+</body>
+
+<script>
+    let app = new Vue ({
+        el: '#web',
+        data: {
+            address: 'https://vuejs.org/',
+            classes: ['one','two'],
+            name: 'Mynul'
+        },
+    })
+
+</script>
+
+</html>
