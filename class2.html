@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title> Vue js methods</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <!-- Calling it from data App.js -->
+    <div id="app">
+        <h1>{{myName()}}</h1>
+        <h2> {{ myAge(24)}}</h2>
+    </div>
+
+
+    <script type="text/javascript">
+
+        let app = new Vue ({
+            el: '#app',
+            data: {
+                name: 'Mynul'
+            },
+            methods:{
+              myName(){
+                return 'My name is ' + `${this.name}`
+              },
+              myAge(age){
+                return 'Your age is ' + `${age}` + ' years old'
+              }
+              
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>
