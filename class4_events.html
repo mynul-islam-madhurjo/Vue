@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title> Vue js Events</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+
+
+<body>
+
+    <h4>Events</h4>
+
+    <div id="events">
+        <h1>You have {{taka}} taka</h1>
+
+        <!-- This is on click event -->
+        <button v-on:click="taka++" >+1</button>
+        <button v-on:click="taka--" >-1</button>
+
+        <!-- We can also use @ for on click event -->
+        <button @click="taka++" >+1 @</button>
+        <button @click="taka--" >-1 @</button>
+
+        <button @click="incrementTaka(5)" >+5</button>
+        <button @click="incrementTaka(5)" >-5</button>
+        
+    </div>
+
+
+</body>
+
+<script>
+    let app = new Vue ({
+        el: '#events',
+        data:{
+            taka: 100
+        },
+        methods: {
+            incrementTaka(poysha){
+                this.taka += poysha;
+            }
+        }
+    })
+
+</script>
+
+</html>
