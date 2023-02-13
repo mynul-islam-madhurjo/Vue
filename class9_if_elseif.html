@@ -24,6 +24,7 @@
         <button @click="make"> show </button>
 
         <h2 v-if="bool">{{var3}}</h2>
+        <h2 v-else-if="bool1">Empty</h2>
 
     </div>
 
@@ -36,7 +37,8 @@
                 var1: '',
                 var2: '',
                 var3: '',
-                bool: false
+                bool: false,
+                bool1: true
             },
             methods: {
                 make(){
