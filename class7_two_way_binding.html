@@ -19,8 +19,8 @@
 
     <div id="app">
 
-        <h2> This is s {{name}}</h2>
-        <input type="text" v-model="name" />
+        <h2> This is {{name}}</h2>
+        <button @click.alt="message">Click</button>
 
     </div>
 
@@ -30,8 +30,14 @@
         new Vue ({
             el: '#app',
             data: {
-                name: ''
+                name: 'Mynul'
             },
+            methods: {
+                message(){
+                    console.log(this.name);
+                }
+                
+            }
         })
 
 
