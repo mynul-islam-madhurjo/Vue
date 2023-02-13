@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title> Vue Keyboard Events</title>
+    <title> Vue Two Way Data Binding</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
@@ -10,12 +10,20 @@
 
 <body>
 
- <div id="app">
+    <!-- <div id="app">
 
         <h2> This is {{name}}</h2>
         <input type="text" @keyup="changeName" >
 
-    </div> 
+    </div> -->
+
+    <div id="app">
+
+        <h2> This is s {{name}}</h2>
+        <input type="text" v-model="name" />
+
+    </div>
+
 
 
     <script type="text/javascript">
@@ -24,11 +32,6 @@
             data: {
                 name: ''
             },
-            methods: {
-                changeName(e){
-                    this.name = e.target.value;
-                }
-            }
         })
 
 
