@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title> Vue Else If</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+
+
+<body>
+
+    <!-- <div id="app">
+
+        <h2> This is {{name}}</h2>
+        <input type="text" @keyup="changeName" >
+
+    </div> -->
+
+    <div id="app">
+        <input type="text" v-model='var1'> <br><br>
+        <input type="text" v-model='var2'> <br><br>
+
+        <button @click="make"> show </button>
+
+        <h2 v-if="bool">{{var3}}</h2>
+
+    </div>
+
+
+
+    <script type="text/javascript">
+        new Vue ({
+            el: '#app',
+            data: {
+                var1: '',
+                var2: '',
+                var3: '',
+                bool: false
+            },
+            methods: {
+                make(){
+                    this.var3= this.var1+this.var2;
+                    this.bool= true;
+                }
+
+            }
+        })
+
+
+    </script>
+
+</body>
+
+</html>
