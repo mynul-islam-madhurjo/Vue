@@ -4,20 +4,18 @@
     {{ title }}
   </div>
   <Navbar></Navbar>
-  <nav>
-            <ul>
-                <li><a href="" >Home</a></li>
-                <li><a href="" >Blog</a></li>
-                <li><a href="" >About us</a></li>
-                <li><a href="" >Contact</a></li>
-            </ul>
-        </nav>
+  <Allfriends></Allfriends>
+  <Onlinefriends></Onlinefriends>
+
+
 
 </template>
 
 <script>
 
 import Navbar from './components/Navbar.vue'
+import Allfriends from './components/Allfriends.vue'
+import Onlinefriends from './components/Onlinefriends.vue'
 
 export default {
   name: 'App',
@@ -27,7 +25,9 @@ export default {
     }
   },
   components: {
-  Navbar
+  Navbar,
+  Allfriends,
+  Onlinefriends
 }
 
 }

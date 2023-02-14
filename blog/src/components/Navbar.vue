@@ -27,12 +27,11 @@ export default {
 
 </script>
 <!-- 
-Scope is used for binding only that particular page with style -->
+Scope is used for accesing only that particular page with style -->
 <style scoped>
     nav {
         text-align: center;
     }
-
     nav ul{
         padding: 0;
     }
