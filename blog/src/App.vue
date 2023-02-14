@@ -4,8 +4,8 @@
     {{ title }}
   </div>
   <Navbar></Navbar>
-  <Allfriends></Allfriends>
-  <Onlinefriends></Onlinefriends>
+  <Allfriends :friends="friends"></Allfriends>
+  <Onlinefriends :friends="friends"></Onlinefriends>
 
 
 
@@ -22,6 +22,13 @@ export default {
   data(){
     return {
       title: 'New Application Running',
+      friends: [
+                {name: 'A',status: 'online' },
+                {name: 'B',status: 'online' },
+                {name: 'C',status: 'offline' },
+                {name: 'D',status: 'online' },
+                {name: 'E',status: 'offline' },
+            ]
     }
   },
   components: {
