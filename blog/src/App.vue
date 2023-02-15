@@ -5,8 +5,13 @@
   </div>
   <Navbar></Navbar>
   <!-- props is used when we pass same array in multiple components -->
+  <!-- 
   <Allfriends :friends="friends" @delete="unfriend"></Allfriends>
-  <Onlinefriends :friends="friends"></Onlinefriends>
+  <Onlinefriends :friends="friends"></Onlinefriends> -->
+
+  <Hook></Hook>
+
+
 
 
 
@@ -15,8 +20,10 @@
 <script>
 
 import Navbar from './components/Navbar.vue'
-import Allfriends from './components/Allfriends.vue'
-import Onlinefriends from './components/Onlinefriends.vue'
+// import Allfriends from './components/Allfriends.vue'
+// import Onlinefriends from './components/Onlinefriends.vue'
+
+import Hook from './components/Hook.vue'
 
 export default {
   name: 'App',
@@ -34,8 +41,7 @@ export default {
   },
   components: {
   Navbar,
-  Allfriends,
-  Onlinefriends
+  Hook
 },
 methods: {
   unfriend(gg){
