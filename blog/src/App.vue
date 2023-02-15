@@ -4,6 +4,7 @@
     {{ title }}
   </div>
   <Navbar></Navbar>
+  <!-- props is used when we pass same array in multiple components -->
   <Allfriends :friends="friends"></Allfriends>
   <Onlinefriends :friends="friends"></Onlinefriends>
 
