@@ -5,7 +5,7 @@
   </div>
   <Navbar></Navbar>
   <!-- props is used when we pass same array in multiple components -->
-  <Allfriends :friends="friends"></Allfriends>
+  <Allfriends :friends="friends" @delete="unfriend"></Allfriends>
   <Onlinefriends :friends="friends"></Onlinefriends>
 
 
@@ -36,7 +36,17 @@ export default {
   Navbar,
   Allfriends,
   Onlinefriends
-}
+},
+methods: {
+  unfriend(gg){
+    //console.log(gg)
+    this.friends=this.friends.filter( friend =>{
+      return friend.name !== gg.name
+    }
+    
+    )
+  }
+},
 
 }
 </script>
