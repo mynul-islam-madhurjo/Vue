@@ -18,6 +18,7 @@
 
     <!-- <div>{{ posts }}</div> -->
     <div v-for="(value, index) in updatedFilter" :key="index">
+        <hr>
     {{ value }}
     </div>
 
