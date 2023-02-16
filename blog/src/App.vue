@@ -9,7 +9,8 @@
   <Allfriends :friends="friends" @delete="unfriend"></Allfriends>
   <Onlinefriends :friends="friends"></Onlinefriends> -->
 
-  <Hook></Hook>
+  <!-- <Hook></Hook> -->
+  <Axios></Axios>
 
 
 
@@ -23,7 +24,8 @@ import Navbar from './components/Navbar.vue'
 // import Allfriends from './components/Allfriends.vue'
 // import Onlinefriends from './components/Onlinefriends.vue'
 
-import Hook from './components/Hook.vue'
+// import Hook from './components/Hook.vue'
+import Axios from './components/Axios.vue'
 
 export default {
   name: 'App',
@@ -41,7 +43,8 @@ export default {
   },
   components: {
   Navbar,
-  Hook
+  Axios
+
 },
 methods: {
   unfriend(gg){
