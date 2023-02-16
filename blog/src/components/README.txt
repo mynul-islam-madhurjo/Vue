@@ -1,0 +1,1 @@
+1. We can use Axios request for establishing connection with database.
