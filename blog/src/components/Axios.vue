@@ -9,12 +9,19 @@
 
     <div>
         <ul>
-            <li v-for="(value, index) in filtered" :key="index">
+            <li v-for="(value, index) in filter" :key="index">
                 {{ value }}
             </li>
         </ul>
 
     </div>
+
+    <!-- <div>{{ posts }}</div> -->
+    <div v-for="(value, index) in updatedFilter" :key="index">
+    {{ value }}
+    </div>
+
+
 
 
 
@@ -50,12 +57,16 @@ export default {
     },
     computed: {
 
-    filtered() {
+    filter() {
         return this.array1.map(x => {
            return x=x+1
-        });
-
-  }
+        })
+  },
+    updatedFilter() {
+        return this.posts.map(x => {
+            return x.body
+        })
+    }
 
 }
 }
