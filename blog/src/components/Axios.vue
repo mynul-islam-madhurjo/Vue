@@ -65,6 +65,8 @@ export default {
   },
     updatedFilter() {
         return this.posts.map(x => {
+            if(!x.body || typeof(x.body) != 'string') return ''
+            x.body = x.body.slice(0, 50)
             return x.body
         })
     }
