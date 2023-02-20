@@ -1,11 +1,6 @@
 <template>
 
 <div id="app">
-    <!-- <div v-for="post in posts" :key="post.id">
-        <hr>
-    <h3>#{{post.id}} {{post.title}}</h3>
-    <p>post.body</p>
-    </div> -->
 
     <div>
         <ul>
@@ -17,16 +12,23 @@
     </div>
 
     <!-- <div>{{ posts }}</div> -->
+
+    <input type="text" v-model="searchterm">
+
+    <h2>Title</h2>
+    <div v-for="post in filterSearch">
+    {{post.title}}
+    </div>
+
+
+    <h2>Body</h2>
     <div v-for="(value, index) in updatedFilter" :key="index">
         <hr>
     {{ value }}
     </div>
-
-
-
-
-
+    
 </div>
+
 
 </template>
 
@@ -40,7 +42,8 @@ export default {
     data(){
         return{
             posts: [],
-            array1: [1,2,3,4,5]
+            array1: [1,2,3,4,5],
+            searchterm: ""
         }
     },
     methods:{
@@ -69,7 +72,24 @@ export default {
             x.body = x.body.slice(0, 50)
             return x.body
         })
+    },
+
+    filterSearch(){
+        return this.posts.filter(x => {
+            return x.title.match(this.searchterm)
+        })
     }
+
+
+
+    // filterSearch(){
+    //     return this.searchterm
+    //     ? this.posts.filter((post) => post.title.indexOf(this.searchterm))
+    //     : this.posts;
+
+    //     console.log(this.posts)
+    // }
+
 
 }
 }

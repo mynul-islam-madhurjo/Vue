@@ -43,6 +43,7 @@ export default {
   },
   components: {
   Navbar,
+  // filter,search methods
   Axios
 
 },
